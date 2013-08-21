@@ -1,0 +1,13 @@
+form(method="POST",action="/product/create")
+  p Nome:
+    input#name(type="text",name="name")
+  p Preco:
+    input#price(type="text",name="price")
+  p Categoria:
+    select#category
+      each cat in categories
+        option(value=cat._id) #{cat.name}
+  p Descricao:
+    textarea#description(name="description")
+  p
+    button(type="submit") cria
